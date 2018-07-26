@@ -5,7 +5,7 @@ require "Top/Movies/CLI/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "Top-Movies-CLI"
-  spec.version       = Top::Movies::CLI::VERSION
+  spec.version       = TopMovies::VERSION
   spec.authors       = ["'Madeline Stark'"]
   spec.email         = ["'madeline.stark1@gmail.com'"]
 
