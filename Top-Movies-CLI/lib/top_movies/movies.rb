@@ -16,9 +16,16 @@ def self.create_from_collection(movies_array)
       end
 end
 
+def self.movie_included(movie)
+#see if movie == movie.name.downcase after iterating through all
+#use include?
+end 
+
 
 def self.all
   @@all
 end 
+
+#maybe option to see if your favorite movie is in top 250! 
 
 end
