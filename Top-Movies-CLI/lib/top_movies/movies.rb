@@ -5,6 +5,7 @@ class Movies
 
 def initialize(scraped_data)
   #takes in scraped data from scraper find movies method and creates instance of movie class
+  #or maybe calls on scraper class here?
   #sets movie.name to object to string 
   #pushes self into all
 end 
