@@ -12,3 +12,5 @@ require "Top/Movies/CLI"
 
 require "irb"
 IRB.start(__FILE__)
+
+Top-Movies-CLI::CLI.new.run 
