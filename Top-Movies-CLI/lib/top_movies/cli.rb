@@ -25,17 +25,18 @@ def menu
       if input.to_i == 1
         make_movies
         display_movies
+        menu
       elsif input == 2
           puts "What's your favorite movie?"
           movie = gets.strip.downcase 
           favorite_movie(movie)
+          menu
        else
          puts "Sorry, that's not an option."
          menu 
       end
      end
-    menu 
-
+     #should go to goodbye after this as is called in run 
   end
 
   def make_movies
