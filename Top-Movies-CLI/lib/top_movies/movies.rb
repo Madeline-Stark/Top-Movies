@@ -18,7 +18,7 @@ def self.movie_included(movie)
   if self.all.include?(movie.name.downcase)
     puts "Congrats! Your favorite movie is a fan favorite!"
   else
-    puts "Sorry! You chose an unpopular choice"
+    puts "Sorry! You chose an unpopular movie."
   end
 #see if movie == movie.name.downcase after iterating through all
 #use include? or do each do and set answer to variable?
