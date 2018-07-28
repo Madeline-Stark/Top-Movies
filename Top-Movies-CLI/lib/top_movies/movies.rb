@@ -4,11 +4,9 @@ class Movies
   @@all = [ ]
 
 def initialize(movie)
-  #takes in scraped data from scraper find movies method and creates instance of movie class
-  #or maybe calls on scraper class here?
-  #sets movie.name to object to string 
-  #pushes self into all
-end 
+  @name = movie
+  @@all << self
+end
 
 def self.create_from_collection(movies_array)
       movies_array.each do |movie|
@@ -17,15 +15,30 @@ def self.create_from_collection(movies_array)
 end
 
 def self.movie_included(movie)
+  if self.all.include?(movie.name.downcase)
+    puts "Congrats! Your favorite movie is a fan favorite!"
+  else
+    puts "Sorry! You chose an unpopular choice"
+  end
 #see if movie == movie.name.downcase after iterating through all
-#use include?
-end 
+#use include? or do each do and set answer to variable?
+# favorite = nil
+# self.all.each do |film|
+#   if film.downcase == movie.downcase
+#     favorite = film.downcase
+#   end
+# if favorite != nil
+#   puts "Congrats! Your favorite movie is a fan favorite!"
+# else
+#   puts "Sorry! You chose an unpopular choice"
+# end
+
+end
 
 
 def self.all
   @@all
-end 
+end
 
-#maybe option to see if your favorite movie is in top 250! 
 
 end
