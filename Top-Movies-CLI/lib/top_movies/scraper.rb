@@ -1,13 +1,28 @@
 class Scraper
+  attr_accessor :name, :director
+
+  def initialize
+    self.scrape_top_page
+  end
 
   def self.find_movies
-    #to list out each top 250 movie and iterate over each to create movie objects 
+    #to list out each top 250 movie and iterate over each to create movie objects
+    #or maybe this functionality is in scrape_top_page method.
 
-  end 
+  end
 
   def self.scrape_top_page
     doc = Nokogiri::HTML(open(https://www.imdb.com/chart/top))
     binding.pry
+    new_array = []
+    doc.css(parameters).each do |movie|
+      self.name = doc.css(parameters)
+      self.director = doc.css(parameters)
+      new_array << self
+    end
+    new_array
+
+
     # new_array = []
     # doc.css(".student-card").each_with_index do |student, index|
     #   student_name = doc.css(".student-name")[index].text
