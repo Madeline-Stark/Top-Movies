@@ -1,8 +1,6 @@
 # Top::Movies::CLI
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/Top/Movies/CLI`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to Top Movies CLI! This application will allow you to view IMDB's top 250 films and find out information about each one.
 
 ## Installation
 
@@ -22,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+TODO: Use by running bin/console and responding to each prompt.
 
 ## Development
 
