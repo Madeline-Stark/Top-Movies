@@ -1,9 +1,9 @@
-require "Nokogiri"
+require "nokogiri"
 require "open-uri"
 
 
 class Scraper
-  attr_accessor :name, :director
+  attr_accessor :name
 
   # Questions for tech coach:
     # ask for help on accessing pry in this lab 
@@ -24,12 +24,12 @@ class Scraper
   end
 
   def self.scrape_top_page
-    doc = Nokogiri::HTML(open("https://www.imdb.com/chart/top"))
+    doc = Nokogiri::HTML(open("https://www.imdb.com/chart/top")) #access in irb
     binding.pry
     new_array = []
     # doc.css(parameters).each do |movie|
     #   self.name = doc.css(parameters)
-    #   self.director = doc.css(parameters)
+    #
     #   new_array << self
     #end
     new_array
