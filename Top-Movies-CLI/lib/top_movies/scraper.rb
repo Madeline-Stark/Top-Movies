@@ -1,6 +1,14 @@
 class Scraper
   attr_accessor :name, :director
 
+  # Questions for tech coach:
+    # help with scraping
+    # ask for help on accessing pry in this lab 
+    # and then finding the right css selectors to find movie names and directors
+    # and also ask if I’m going to be able to access the methods of other classes the way it is set up now
+    # once scraper is working, make sure to test cli/movies/how everything works together 
+
+
   def initialize
     self.scrape_top_page
   end
