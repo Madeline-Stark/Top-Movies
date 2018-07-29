@@ -60,12 +60,10 @@ def menu
     Movies.all.each_with_index(1) do |movie, index|
       new_array << {index => movie}
     end
-    new_array[number] 
+    new_array[number]
     end
     #do each with index in hash and then read out that number
     #need to iterate over array with each with index
-
-  end
 
   def favorite_movie(movie)
     Movies.movie_included(movie)

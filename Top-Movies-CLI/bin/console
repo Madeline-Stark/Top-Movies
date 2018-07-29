@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
-require "Top/Movies/CLI"
+require_relative "../lib/top_movies"
 
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
@@ -13,4 +13,4 @@ require "Top/Movies/CLI"
 require "irb"
 IRB.start(__FILE__)
 
-Top-Movies-CLI::CLI.new.run 
+Top-Movies-CLI::CLI.new.run

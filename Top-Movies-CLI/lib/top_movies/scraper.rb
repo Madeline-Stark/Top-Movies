@@ -1,9 +1,13 @@
+require "Nokogiri"
+require "open-uri"
+
+
 class Scraper
   attr_accessor :name, :director
 
   # Questions for tech coach:
-    # help with scraping
     # ask for help on accessing pry in this lab 
+    # help with scraping
     # and then finding the right css selectors to find movie names and directors
     # and also ask if I’m going to be able to access the methods of other classes the way it is set up now
     # once scraper is working, make sure to test cli/movies/how everything works together 
@@ -20,15 +24,16 @@ class Scraper
   end
 
   def self.scrape_top_page
-    doc = Nokogiri::HTML(open(https://www.imdb.com/chart/top))
+    doc = Nokogiri::HTML(open("https://www.imdb.com/chart/top"))
     binding.pry
     new_array = []
-    doc.css(parameters).each do |movie|
-      self.name = doc.css(parameters)
-      self.director = doc.css(parameters)
-      new_array << self
-    end
+    # doc.css(parameters).each do |movie|
+    #   self.name = doc.css(parameters)
+    #   self.director = doc.css(parameters)
+    #   new_array << self
+    #end
     new_array
+  end
 
 
     # new_array = []
@@ -39,7 +44,6 @@ class Scraper
     #   new_array << {:name => student_name, :location => location, :profile_url => url}
     # end
     # new_array
-  end
 
 
 end

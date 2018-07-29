@@ -1,7 +1,7 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "Top/Movies/CLI/version"
+require_relative "./lib/top_movies/version" #. for current directory
 
 Gem::Specification.new do |spec|
   spec.name          = "Top-Movies-CLI"
@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'Madeline Stark'"]
   spec.email         = ["'madeline.stark1@gmail.com'"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "CLI for IMDB's Top 250."
+  spec.description   = "This is a CLI to list out IMDB's top 250 movies."
+  spec.homepage      = "https://github.com/Madeline-Stark/Top-Movies-CLI"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
