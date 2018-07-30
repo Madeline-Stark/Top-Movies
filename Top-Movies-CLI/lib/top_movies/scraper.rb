@@ -24,15 +24,14 @@ class Scraper
   end
 
   def self.scrape_top_page
-    doc = Nokogiri::HTML(open("https://www.imdb.com/chart/top")) #access in irb
-    binding.pry
+    doc = Nokogiri::HTML(open("https://www.imdb.com/chart/top"))
+    #binding.pry
     new_array = []
-    #doc.css('td.titleColumn a')[100].text 
-    # doc.css(parameters).each do |movie|
-    #   self.name = doc.css(parameters)
-    #
-    #   new_array << self
-    #end
+    doc.css('td.titleColumn a')[100].text
+    doc.css.each_with_index do |movie, index|
+      movie.name = doc.css('td.titleColumn a')[index].text
+      new_array << movie
+    end
     new_array
   end
 
