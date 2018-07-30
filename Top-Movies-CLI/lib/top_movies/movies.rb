@@ -24,6 +24,20 @@ def self.movie_included(movie)
   end
 end
 
+def self.show_movie_number(number)
+  new_array = []
+  Movies.all.each_with_index(1) do |movie, index|
+    new_array << {index => movie}
+  end
+  new_array[number]
+end
+  #do each with index in hash and then read out that number
+  #need to iterate over array with each with index
+
+def self.favorite_movie(movie)
+  Movies.movie_included(movie)
+end
+
 
 def self.all
   @@all
