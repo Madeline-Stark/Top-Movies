@@ -3,7 +3,7 @@ require "open-uri"
 
 
 class Scraper
-  attr_accessor :name
+  #attr_accessor :name
 
   # Questions for tech coach:
     # ask for help on accessing pry in this lab 
@@ -27,9 +27,9 @@ class Scraper
     doc = Nokogiri::HTML(open("https://www.imdb.com/chart/top"))
     #binding.pry
     new_array = []
-    doc.css('td.titleColumn a')[100].text
+    #doc.css('td.titleColumn a')[100].text
     doc.css.each_with_index do |movie, index|
-      movie.name = doc.css('td.titleColumn a')[index].text
+      movie = doc.css('td.titleColumn a')[index].text
       new_array << movie
     end
     new_array
