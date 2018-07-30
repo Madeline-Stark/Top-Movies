@@ -1,6 +1,5 @@
 class CLI
 
-#for now call on other methods from other classes and if it doens't work, deal with it on sunday session
 
 def run
     greeting
@@ -29,12 +28,12 @@ def menu
       elsif input == 2
           puts "What's your favorite movie?"
           movie = gets.strip.downcase
-          Movies.favorite_movie(movie)
+          Movies.movie_included(movie)
           menu
       elsif input == 3
         puts "What number movie are you interested in?"
         number = gets.strip.to_i
-        CLI.show_movie_number(number)
+        Movies.show_movie_number(number)
         menu
        else
          puts "Sorry, that's not an option."
@@ -53,20 +52,6 @@ def menu
       Movies.all.each_with_index(1) do |movie, index|
         puts "#{index}.) : ""#{movie.name.upcase}"
       end
-  end
-
-  def self.show_movie_number(number)
-    new_array = []
-    Movies.all.each_with_index(1) do |movie, index|
-      new_array << {index => movie}
-    end
-    new_array[number]
-    end
-    #do each with index in hash and then read out that number
-    #need to iterate over array with each with index
-
-  def favorite_movie(movie)
-    Movies.movie_included(movie)
   end
 
   def goodbye
