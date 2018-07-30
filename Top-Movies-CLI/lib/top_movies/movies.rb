@@ -1,10 +1,10 @@
 class Movies
-  attr_accessor :name
+  #attr_accessor :name
 
   @@all = [ ]
 
 def initialize(movie)
-  @name = movie
+  #@name = movie
   @@all << self
 end
 
@@ -14,31 +14,35 @@ def self.create_from_collection(movies_array)
       end
 end
 
+      
+
 def self.movie_included(movie)
-  if self.all.include?(movie.name.downcase)
+  if self.all.include?(movie)
     puts "Congrats! Your favorite movie is a fan favorite!"
   else
     puts "Sorry! You chose an unpopular movie."
   end
-#see if movie == movie.name.downcase after iterating through all
-#use include? or do each do and set answer to variable?
-# favorite = nil
-# self.all.each do |film|
-#   if film.downcase == movie.downcase
-#     favorite = film.downcase
-#   end
-# if favorite != nil
-#   puts "Congrats! Your favorite movie is a fan favorite!"
-# else
-#   puts "Sorry! You chose an unpopular choice"
-# end
-
 end
 
 
 def self.all
   @@all
 end
+
+# For testing:
+# all = [ ]
+#       new_array.each do |movie|
+#         all << movie
+#       end #works!
+#       
+#       film = "Superbad"
+#       film = "The Godfather"
+#       film = "Catch Me If You Can"
+#         if all.include?(film)
+#           puts "Congrats! Your favorite movie is a fan favorite!"
+#         else
+#           puts "Sorry! You chose an unpopular movie."
+#         end #works! 
 
 
 end
