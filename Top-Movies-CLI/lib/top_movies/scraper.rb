@@ -27,24 +27,7 @@ class Scraper
     doc = Nokogiri::HTML(open("https://www.imdb.com/chart/top")) #access in irb
     binding.pry
     new_array = []
-    #name="title" value="Rajkumar Hirani (dir.), Aamir Khan, Anushka Sharma">] children=[#<Nokogiri::XML::Text:0x1406cc0 "PK">]> PK is movie title
-    #doc.css("td[name = "title"]") no
-    #doc.css("td") no
-    #doc.css("title") no
-    #doc.css('div#titleColumn')[0] nil
-    #doc.css('titleColumn')[0] nil
-    #doc.css('titleColumn')[5] nil
-    #doc.css('#titleColumn a')[5] nil
-    #doc.css("title")[7].text no
-    #doc.css("a") returns a lot, but movie name is in there
-    #doc.css("a")[200]["href"] returns links to movie but not movie
-    #doc.css("a")[200].select{|link| link['name'] == "title"} no
-    #doc.css('div#lister')[100] nil
-    #doc.css('td.titleColumn')[100] yes! narrows down some!
-    #doc.css('td.titleColumn a')[100] narrows down more!
-    #doc.css('td.titleColumn a children')[100] nil
-    #doc.css('td.titleColumn a')[100].text yes! got it!
-    #
+    #doc.css('td.titleColumn a')[100].text 
     # doc.css(parameters).each do |movie|
     #   self.name = doc.css(parameters)
     #
