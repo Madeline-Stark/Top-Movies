@@ -23,7 +23,7 @@ def menu
 
       if input.to_i == 1
         make_movies
-        display_movies
+        Movies.list_movies
         menu
       elsif input == 2
           puts "What's your favorite movie?"
@@ -48,11 +48,11 @@ def menu
       Movies.create_from_collection(movies_array)
     end
 
-  def display_movies
-      Movies.all.each_with_index(1) do |movie, index|
-        puts "#{index}.) : ""#{movie.name.upcase}"
-      end
-  end
+  # def display_movies
+  #     Movies.all.each_with_index(1) do |movie, index|
+  #       puts "#{index}.) : ""#{movie.name.upcase}"
+  #     end
+  # end
 
   def goodbye
     puts "See you later!"
