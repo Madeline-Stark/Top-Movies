@@ -1,5 +1,5 @@
+module TopMovies
 class CLI
-
 
 def run
     greeting
@@ -22,7 +22,7 @@ def menu
       input = gets.strip.downcase
 
       if input.to_i == 1
-        make_movies
+        Movies.make_movies
         Movies.list_movies
         menu
       elsif input == 2
@@ -36,17 +36,13 @@ def menu
         Movies.show_movie_number(number)
         menu
        else
+         binding.pry
          puts "Sorry, that's not an option."
          menu
       end
      end
      #should go to goodbye after this as is called in run
   end
-
-  def make_movies
-      movies_array = Scraper.scrape_index_page
-      Movies.create_from_collection(movies_array)
-    end
 
   # def display_movies
   #     Movies.all.each_with_index(1) do |movie, index|
@@ -60,4 +56,5 @@ def menu
 
 
 
+end
 end

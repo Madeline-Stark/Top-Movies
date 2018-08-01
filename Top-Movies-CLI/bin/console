@@ -12,7 +12,7 @@ require_relative "../lib/top_movies"
 # require "pry"
 # Pry.start
 
-require "irb"
-IRB.start(__FILE__)
+# require "irb"
+# IRB.start(__FILE__)
 
-Top-Movies-CLI::CLI.new.run
+TopMovies::CLI.new.run
