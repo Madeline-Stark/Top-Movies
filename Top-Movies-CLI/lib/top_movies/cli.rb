@@ -5,7 +5,6 @@ class CLI
 def run
     greeting
     menu
-    goodbye
 end
 
 def greeting
@@ -18,8 +17,6 @@ def menu
   #See if your favorite movie is on the list. 3.See the movie corresponding to a certain number
   puts "Please enter the number of the option you're interested in or type exit to leave:"
 
-
-    while input != "exit"
 
       input = gets.strip.downcase
       Movies.make_movies #need to put this here so methods will work if called before option 1
@@ -42,11 +39,12 @@ def menu
       #   number = gets.strip.to_i
       #   Movies.show_movie_number(number)
       #   menu
+    elsif input == "exit"
+      puts "See you later!"
        else
          puts "Sorry, that's not an option."
          menu
       end
-     end
      #should go to goodbye after this as is called in run
   end
 
@@ -55,11 +53,6 @@ def menu
   #       puts "#{index}.) : ""#{movie.name.upcase}"
   #     end
   # end
-
-  def goodbye
-    puts "See you later!"
-  end
-
 
 
 end

@@ -48,9 +48,11 @@ end
 def self.show_movie_date(movie)
   #if all includes that movie then put date of original movie
   self.all.each do |film|
-    binding.pry
+    #binding.pry
     if film.title == movie
-    puts film.title
+      puts film.date #for some reason showing up four times
+    else
+      puts "That film is not in the top 250."
     end
   end
 
