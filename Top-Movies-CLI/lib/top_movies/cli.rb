@@ -27,7 +27,7 @@ def menu
         menu
       elsif input == 2
           puts "What's your favorite movie?"
-          movie = gets.strip.downcase
+          #movie = gets.strip.downcase
           Movies.movie_included(movie)
           menu
       elsif input == 3

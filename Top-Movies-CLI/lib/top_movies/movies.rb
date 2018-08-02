@@ -22,20 +22,18 @@ def self.make_movies
 end
 
 def self.movie_included(movie)
-  if self.all.include?(movie) #do movie.strip.downcase to all and to movie?
+  if self.all.include?(movie.titleize)
     puts "Congrats! Your favorite movie is a fan favorite!"
   else
     puts "Sorry! You chose an unpopular movie."
   end
 end
 
-#methods for list director and list top actors and make option in cli
 
 def self.list_movies
   Movies.all.each_with_index do |movie, index|
-    puts "#{index + 1}.) #{movie}"
+    puts "#{index + 1}.) #{movie.title}"
   end
-  #right now is putting out actual object instead of movie.title which is what it should
 end
 
 
