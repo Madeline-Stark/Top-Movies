@@ -1,5 +1,6 @@
 module TopMovies
 class CLI
+  require "pry"
 
 def run
     greeting
@@ -21,15 +22,16 @@ def menu
     while input != "exit"
 
       input = gets.strip.downcase
+      Movies.make_movies #need to put this here so methods will work if called before option 1
 
       if input.to_i == 1
-        Movies.make_movies
         Movies.list_movies
         menu
       elsif input.to_i == 2
-        "What movie do are you interested in?"
+        puts "What movie are you interested in?"
         movie = gets.strip
         Movies.show_movie_date(movie)
+        menu
       # elsif input.to_i == 2
       #     puts "What's your favorite movie?"
       #     movie = gets.strip

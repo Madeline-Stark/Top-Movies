@@ -46,6 +46,13 @@ def self.show_movie_number(number)
 end
 
 def self.show_movie_date(movie)
+  #if all includes that movie then put date of original movie
+  self.all.each do |film|
+    binding.pry
+    if film.title == movie
+    puts film.title
+    end
+  end
 
 end
 
