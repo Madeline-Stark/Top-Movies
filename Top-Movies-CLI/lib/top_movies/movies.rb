@@ -1,23 +1,24 @@
 module TopMovies
 class Movies
-  attr_accessor :title
+  attr_accessor :title, :date
 
   @@all = [ ]
 
-def initialize(title, director, actors)
-  @title = title.titleize
+
+def initialize(movie_hash)
+  movie_hash.each {|key, value| self.send(("#{key}="), value)}
   @@all << self
 end
 
-def self.create_from_collection(movies_array)
-      movies_array.each do |movie|
-        movie = self.new(title, director, actors)
+def self.create_from_collection(movie_hash)
+      movie_hash.each do |movie|
+        movie = self.new(movie)
       end
 end
 
 def self.make_movies
-    movies_array = Scraper.scrape_index_page
-    self.create_from_collection(movies_array)
+    movie_hash = Scraper.scrape_index_page
+    self.create_from_collection(movie_hash)
 end
 
 def self.movie_included(movie)
@@ -40,6 +41,10 @@ end
 
 def self.show_movie_number(number)
   list_movies[number - 1]
+end
+
+def self.show_movie_date(movie)
+
 end
 
 
