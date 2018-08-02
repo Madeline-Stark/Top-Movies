@@ -15,11 +15,9 @@ class Scraper
     doc = Nokogiri::HTML(open("https://www.imdb.com/chart/top"))
     new_array = []
     binding.pry
-#film = Movie.new
-      #movie = doc.css('td.titleColumn')[5]["a href"]
-      #movie = doc.css('td.titleColumn')[5]
-      #doc.css('td.titleColumn')[5].value
-      #doc.css('td.titleColumn title')[5]
+    #maybe do year it was made with attributed text
+  #film = Movie.new(name, date)
+      #doc.css('span.secondaryInfo')[5].text give us year!!
     doc.css('td.titleColumn a').each_with_index do |movie, index|
       movie = doc.css('td.titleColumn a')[index].text
       new_array << movie
