@@ -21,8 +21,12 @@ def self.make_movies
     self.create_from_collection(movie_hash)
 end
 
+# def titleize
+#     split(/(\W)/).map(&:capitalize).join
+# end
+
 def self.movie_included(movie)
-  if self.all.include?(movie.titleize)
+  if self.all.include?(movie) #got rid of titleize
     puts "Congrats! Your favorite movie is a fan favorite!"
   else
     puts "Sorry! You chose an unpopular movie."
@@ -44,6 +48,7 @@ end
 def self.show_movie_date(movie)
 
 end
+
 
 
 def self.all

@@ -25,18 +25,17 @@ def menu
         Movies.make_movies
         Movies.list_movies
         menu
-      elsif input == 2
+      elsif input.to_i == 2
           puts "What's your favorite movie?"
-          #movie = gets.strip.downcase
+          movie = gets.strip
           Movies.movie_included(movie)
           menu
-      elsif input == 3
+      elsif input.to_i == 3
         puts "What number movie are you interested in?"
         number = gets.strip.to_i
         Movies.show_movie_number(number)
         menu
        else
-         binding.pry
          puts "Sorry, that's not an option."
          menu
       end
