@@ -13,8 +13,8 @@ end
 
 def menu
   input = nil
-  puts "Your options are to 1. See the top 250 movies of IMDB. 2.See the release date of a specific movie."
-  #See if your favorite movie is on the list. 3.See the movie corresponding to a certain number
+  puts "Your options are to 1. See the top 250 movies of IMDB. 2.See the release date of a specific movie. 3.See if your favorite movie is on the list."
+  # 3.See the movie corresponding to a certain number
   puts "Please enter the number of the option you're interested in or type exit to leave:"
 
 
@@ -29,11 +29,11 @@ def menu
         movie = gets.strip
         Movies.show_movie_date(movie)
         menu
-      # elsif input.to_i == 2
-      #     puts "What's your favorite movie?"
-      #     movie = gets.strip
-      #     Movies.movie_included(movie)
-      #     menu
+      elsif input.to_i == 3
+          puts "What's your favorite movie?"
+          movie = gets.strip
+          Movies.movie_included(movie)
+          menu
       # elsif input.to_i == 3
       #   puts "What number movie are you interested in?"
       #   number = gets.strip.to_i

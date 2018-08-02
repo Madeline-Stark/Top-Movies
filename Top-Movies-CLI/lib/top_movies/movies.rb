@@ -26,7 +26,13 @@ end
 # end
 
 def self.movie_included(movie)
-  if self.all.include?(movie) #got rid of titleize
+  answer = nil
+  self.all.each do |film|
+  if film.title == movie
+    answer = film.title
+  end
+  end
+  if answer != nil
     puts "Congrats! Your favorite movie is a fan favorite!"
   else
     puts "Sorry! You chose an unpopular movie."
@@ -46,12 +52,10 @@ def self.show_movie_number(number)
 end
 
 def self.show_movie_date(movie)
-  #if all includes that movie then put date of original movie
   answer = nil
   self.all.each do |film|
-    #binding.pry
   if film.title == movie
-    answer = film.date #for some reason showing up four times
+    answer = film.date
   end
   end
   if answer != nil
