@@ -21,10 +21,6 @@ def self.make_movies
     self.create_from_collection(movie_hash)
 end
 
-# def titleize
-#     split(/(\W)/).map(&:capitalize).join
-# end
-
 def self.movie_included(movie)
   answer = nil
   self.all.each do |film|
