@@ -42,11 +42,6 @@ def self.list_movies
   end
 end
 
-
-def self.show_movie_number(number)
-  list_movies[number - 1]
-end
-
 def self.show_movie_date(movie)
   answer = nil
   self.all.each do |film|
