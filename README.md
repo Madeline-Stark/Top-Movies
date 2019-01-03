@@ -1,13 +1,13 @@
-# Top::Movies::CLI
+# Top Movies
 
-Welcome to Top Movies CLI! This application will allow you to view IMDB's top 250 films and find out information about each one.
+Welcome to Top Movies! This application will allow you to view IMDB's top 250 films and find out information about each one.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'Top-Movies-CLI'
+gem 'Top-Movies'
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install Top-Movies-CLI
+    $ gem install Top-Movies
 
 ## Usage
 
