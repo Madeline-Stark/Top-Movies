@@ -1,13 +1,13 @@
-# Top::Movies::CLI
+# Top Movies
 
-Welcome to Top Movies CLI! This application will allow you to view IMDB's top 250 films and find out information about each one.
+Welcome to Top Movies! This application will allow you to view IMDB's top 250 films and find out information about each one.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'Top-Movies-CLI'
+gem 'Top-Movies'
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install Top-Movies-CLI
+    $ gem install Top-Movies
 
 ## Usage
 
@@ -30,7 +30,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/'Madeline-Stark'/Top-Movies-CLI. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/'Madeline-Stark'/Top-Movies. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -38,4 +38,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Top::Movies::CLI project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'Madeline-Stark'/Top-Movies-CLI/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Top::Movies::CLI project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'Madeline-Stark'/Top-Movies/blob/master/CODE_OF_CONDUCT.md).
